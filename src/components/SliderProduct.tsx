@@ -94,7 +94,7 @@ const SliderProduct: React.FC = () => {
   }
 
   return (
-    <section className="mt-5">
+    <section className="mt-5 overflow-hidden">
       <Slider {...sliderSettings}>
         {data?.data?.meals.map((meal: any) => (
           <CardProduct

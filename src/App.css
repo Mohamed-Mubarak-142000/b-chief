@@ -1,10 +1,12 @@
 .header {
-  @apply fixed z-50 inset-0 h-20 
-        flex justify-between items-center px-4 md:px-10 lg:px-16 gap-10;
+  @apply w-full fixed z-50 inset-0 h-20 m-0
+        flex justify-between items-center md:px-10 lg:px-16;
 }
+
 .header.move {
   @apply bg-[#010f36] shadow-xl transition-all duration-1000;
 }
+
 .home {
   background-image: url("./images/portrait-modern-man-cleaning-doing-household-chores.jpg") !important;
   background-repeat: no-repeat;
@@ -38,5 +40,5 @@ a.active {
 }
 
 .container {
-  @apply w-full md:w-[90%] lg:w-[85%] mx-auto;
+  @apply w-full mx-auto;
 }

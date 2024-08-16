@@ -7,17 +7,25 @@ import Error from "../components/Error";
 import CardProduct from "../components/CardProduct";
 
 export default function SpecialArea() {
-  const { area } = useParams();
-  const { data, isLoading, isError } = useDish({
+  const { area } = useParams<{ area: string }>();
+  const { data, refetch, isLoading, isError } = useDish({
     endPoint: `filter.php?a=${area}`,
     title: "Special Area",
   });
 
-  // Memoize the meals to avoid unnecessary re-renders
-  const meals = useMemo(() => data?.data?.meals || [], [data]);
+  useEffect(() => {
+    refetch();
+  }, [area, refetch]);
 
-  if (isLoading) return <Loading />;
-  if (isError) return <Error />;
+  const meals = useMemo(() => data?.data?.meals ?? [], [data]);
+
+  if (isLoading) {
+    return <Loading />;
+  }
+
+  if (isError) {
+    return <Error />;
+  }
 
   return (
     <>

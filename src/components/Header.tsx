@@ -28,7 +28,7 @@ export default function Header() {
   ];
 
   return (
-    <header className={`header  ${isScrolled && "move"}`}>
+    <header className={`header ${isScrolled && "move"}`}>
       <h2
         className={`first-letter:text-7xl  align-text-top  font-bold first-letter:text-sky-700 cursor-pointer select-none`}
         onClick={() => navigate("/")}
@@ -38,7 +38,10 @@ export default function Header() {
           Chief
         </span>
       </h2>
-      <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden">
+      <button
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+        className="m-0 md:hidden"
+      >
         <CiMenuFries
           className={`${
             isMenuOpen ? "rotate-90" : "rotate-0"

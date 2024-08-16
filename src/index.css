@@ -4,16 +4,17 @@
 
 @layer base {
   #root {
-    @apply min-w-full min-h-screen bg-white text-black flex flex-col justify-between items-center;
+    @apply min-w-full min-h-screen bg-white text-black flex flex-col justify-between items-center m-0 p-0 box-border;
   }
   body {
     scroll-behavior: smooth;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
   }
 }
 /* Add margin or padding to each slide */
 .slick-slide {
-  padding: 10px; /* Adjust this value as needed */
+  padding: 10px;
+  /* Adjust this value as needed */
 }
 
 .slick-list {

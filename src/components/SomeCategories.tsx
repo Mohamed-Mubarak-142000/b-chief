@@ -64,7 +64,7 @@ const SomeCategories = () => {
   };
 
   return (
-    <section className="mt-5">
+    <section className="mt-5 overflow-hidden">
       <Slider {...settings}>
         {categories?.data?.categories.map((category: any, index: number) => (
           <Card
@@ -72,8 +72,8 @@ const SomeCategories = () => {
               border: "none",
               boxShadow: 0,
               borderRadius: "50%",
-              height: "400px",
-              width: "250px",
+              height: { xs: "300px", sm: "350px", md: "400px" },
+              width: { xs: "200px", sm: "225px", md: "250px" },
               margin: "0 5px",
               display: "flex",
               flexDirection: "column",
@@ -98,8 +98,8 @@ const SomeCategories = () => {
                 alt={category.strCategory}
                 sx={{
                   objectFit: "cover",
-                  height: "250px",
-                  width: "250px",
+                  height: { xs: "150px", sm: "200px", md: "250px" },
+                  width: { xs: "150px", sm: "200px", md: "250px" },
                   borderRadius: "50%",
                   marginBottom: "20px",
                 }}
@@ -110,7 +110,11 @@ const SomeCategories = () => {
                   gutterBottom
                   variant="h5"
                   component="div"
-                  sx={{ textAlign: "center", fontWeight: "bold" }}
+                  sx={{
+                    textAlign: "center",
+                    fontWeight: "bold",
+                    fontSize: { xs: "1rem", sm: "1.25rem", md: "1.5rem" },
+                  }}
                 >
                   {category.strCategory.split(" ").splice(0, 3).join(" ")}
                 </Typography>
