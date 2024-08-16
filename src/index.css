@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  #root {
+    @apply min-w-full min-h-screen bg-white text-black flex flex-col justify-between items-center;
+  }
+  body {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+}
+/* Add margin or padding to each slide */
+.slick-slide {
+  padding: 10px; /* Adjust this value as needed */
+}
+
+.slick-list {
+  margin: 0 -10px; /* Counteract padding to align items correctly */
+}
+
+/* Optional: Style the slider container */
+.slick-track {
+  display: flex;
+  gap: 20px; /* Adjust gap between items */
+}
