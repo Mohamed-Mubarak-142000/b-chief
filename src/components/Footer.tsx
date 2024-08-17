@@ -42,24 +42,25 @@ export default function Footer() {
           </p>
         </div>
         <div className="flex gap-3 items-center justify-center mx-auto mt-5">
-          <Link to={"https://github.com/llMOllSamir"} target="_blank">
+          <Link
+            to={"https://github.com/Mohamed-Mubarak-142000/"}
+            target="_blank"
+          >
             <FaGithub size={25} />
           </Link>
           <Link
-            to={"https://www.linkedin.com/in/mohamed-samir-a7693b274/"}
+            to={"http://www.linkedin.com/in/mohamed-mubarak-142317215/"}
             target="_blank"
           >
             <FaLinkedin size={25} />
           </Link>
           <Link
-            to={
-              "https://www.facebook.com/profile.php?id=100082859111033&mibextid=ZbWKwL"
-            }
+            to={"https://www.facebook.com/profile.php?id=100088453234469/"}
             target="_blank"
           >
             <FaFacebook size={25} />
           </Link>
-          <Link to={"https://wa.me/+201280025507"} target="_blank">
+          <Link to={"https://wa.me/+01050867135"} target="_blank">
             <FaWhatsapp size={25} />
           </Link>
         </div>
